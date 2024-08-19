@@ -1,0 +1,249 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 3.5fr;
+  grid-gap: 5px;
+}
+
+.nav {
+  column-gap: 5vh;
+  align-items: center;
+  padding: 20px;
+  height: 100vh;
+  max-width: 20vh;
+  border: 0px;
+  border-right: 1px;
+  border-style: dashed;
+}
+
+.nav .item {
+  display: block;
+  padding: 10px;
+  font-size: large;
+}
+
+button {
+  border-radius: 50px;
+  border-style: hidden;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+.yellow {
+  background-color: #facc15;
+  padding: 1vh;
+}
+
+.grey {
+  background-color: #333;
+  color: #eaeaea;
+  padding: 2vh;
+}
+
+.title {
+  font-size: larger;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.feed {
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: space-between;
+  justify-content: flex-start;
+  gap: 7vh;
+  grid-column: 2;
+  flex-flow: row wrap;
+}
+
+.form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.form-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  display: flex;
+  background: white;
+  padding: 50px;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3px;
+  font-size: large;
+}
+
+.submit {
+  background-color: #facc15;
+  padding: 3vh;
+  margin: 2vh;
+  font-size: larger;
+}
+
+input {
+  background-color: lightgray;
+  margin: 0.5vh;
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+
+}
+
+.input--description {
+  padding: 0;
+  height: 10vh;
+  width: 100%; 
+  font-size: 1rem; 
+  resize: vertical;
+  background-color: lightgray;
+  border-radius: 5px;
+  border: none;
+  box-sizing: border-box; /* Ensure padding is included in the height */
+}
+.card {
+  display: flex;
+  background: #eaeaea;
+  padding: 2vh;
+  align-items: center;
+  justify-content: right;
+  gap: 2vh;
+  border-radius: 3vh;
+  flex-direction: column;
+}
+
+.card :hover {
+  transition: transform 0.3s ease;
+  transform: translateY(calc(-5px - 1%));
+}
+
+.book-cover-container {
+  width: 200px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.book-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: inherit;
+}
+
+.container-error {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  justify-content: center;
+  padding: 2vh;
+  margin: 1vh;
+  background-color: brown;
+  color: #eaeaea;
+  border-radius: 5px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.book-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 5px;
+}
+
+.link-home {
+  text-decoration: none;
+  forced-color-adjust: none;
+  color: #333;
+}
+
+.form-review {
+  width: 40%;
+  padding: 2vh;
+  border-left: 1px dotted #333;
+}
+
+.rating {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end; 
+}
+
+
+
+.rating label {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.rating label:hover,
+.rating label:hover ~ label {
+  color: #ffa500;
+}
+
+.rating input {
+  display: none;
+}
+
+.rating input:checked ~ label {
+  color: orange;
+}
+
+.review-container {
+  color: #eaeaea;
+  background-color: #333;
+  border-radius: 8px;
+  padding: 2vh;
+  height: 15%;
+}
+
+.star-colored {
+  color: orange;
+}
+
+.row {
+  flex-direction: row;
+}
+
+
